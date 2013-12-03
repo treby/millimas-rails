@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fullname: MyString
+  kana: MyString
+  age: 1
+  height: 1
+  weight: 1
+  bust: 1
+  waist: 1
+  hip: 1
+  birth: 2013-12-02
+  blood: MyString
+  dominant: MyString
+  hobby: MyString
+  speciality: MyString
+  favorite: MyString
+
+two:
+  fullname: MyString
+  kana: MyString
+  age: 1
+  height: 1
+  weight: 1
+  bust: 1
+  waist: 1
+  hip: 1
+  birth: 2013-12-02
+  blood: MyString
+  dominant: MyString
+  hobby: MyString
+  speciality: MyString
+  favorite: MyString
