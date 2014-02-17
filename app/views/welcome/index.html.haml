@@ -1,8 +1,13 @@
-%h1 ミリマスアンテナ
-%ul
-  - @entry_list.each do |entry|
-    %li
-      =link_to entry.title, entry.url, :target => '_blank'
-      (
-      =link_to entry.feed.title, entry.feed.url, :target => '_blank'
-      )
+.row-fluid
+  .span12
+    %h1 ミリマスアンテナ
+    %ul
+      - @entry_list.each do |entry|
+        %li
+          =link_to entry.title, entry.url, :target => '_blank'
+          (
+          =link_to entry.feed.title, entry.feed.url, :target => '_blank'
+          )
+.row-fluid
+  .span12
+    = paginate @entry_list
