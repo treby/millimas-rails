@@ -25,6 +25,12 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :assets do
+  gem 'sprockets-rails', :git => 'https://github.com/rails/sprockets-rails.git'
+  gem 'sass-rails'
+  gem 'bootstrap-sass'
+end
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
