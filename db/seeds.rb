@@ -10,7 +10,7 @@ Category.create(name: '公式サイト', slug: 'official', description: '公式�
 Category.create(name: 'まとめブログ', slug: 'matome', description: '2chまとめブログからの情報', sort_key: 5)
 Category.create(name: '声優ブログ', slug: 'actor', description: '声優さんのブログ', sort_key: 1)
 
-Feed.create(title: 'アイマス公式', category_id: 1, feed_url: 'http://rssblog.ameba.jp/project-imas/rss20.xml')
+Feed.create(title: 'アイマス公式', category_id: 1, feed_url: 'http://idolmaster.jp/blog/?feed=rss2')
 Feed.create(title: 'みります！', category_id: 2, feed_url: 'http://millimas.net/index.rdf')
 Feed.create(title: 'ミリオンライブニュース', category_id: 2, feed_url: 'http://imasmillionlive.blog.fc2.com/?xml')
 Feed.create(title: 'ヴァイ', category_id: 2, feed_url: 'http://vaimas.blog.fc2.com/?xml')
@@ -29,4 +29,3 @@ Feed.create(title: 'はらみー', category_id: 3, feed_url: 'http://yaplog.jp/h
 Feed.create(title: 'じゅりあ', category_id: 3, feed_url: 'http://rssblog.ameba.jp/aimi-sound/rss20.xml')
 Feed.create(title: 'ともかさん', category_id: 3, feed_url: 'http://rssblog.ameba.jp/koiwai-kotori/rss20.xml')
 Feed.create(title: 'もがみん（ころあず）', category_id: 3, feed_url: 'http://rssblog.ameba.jp/azusa-tadokoro/rss20.xml')
-
