@@ -1,11 +1,11 @@
 .row-fluid
   .span12
-    %h1 ミリマスアンテナ
     - @entry_list.each do |entry|
       .alert.alert-info
-        = link_to entry.feed.url, target: '_blank', class: 'btn btn-primary' do
-          H
         = link_to entry.title, entry.url, target: '_blank', class: 'list-group-item'
+        %small
+          \-
+          %small= link_to entry.feed.title, entry.feed.url, target: '_blank'
 .row-fluid
   .span12
     = paginate @entry_list
