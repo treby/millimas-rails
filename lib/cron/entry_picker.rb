@@ -48,7 +48,9 @@ class Cron::EntryPicker
 
   def self.check_new_entries(stored_feed)
     feed = Feedzirra::Feed.fetch_and_parse(stored_feed.feed_url)
-    if stored_feed.last_modified == feed.last_modified
+    if feed.respond_to?('last_modified')
+      puts sprintf('There is no last_modified - %s', feed.title)
+    elsif stored_feed.last_modified == feed.last_modified
       return
     end
 
