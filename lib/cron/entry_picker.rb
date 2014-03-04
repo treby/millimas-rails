@@ -48,6 +48,11 @@ class Cron::EntryPicker
 
   def self.check_new_entries(stored_feed)
     feed = Feedzirra::Feed.fetch_and_parse(stored_feed.feed_url)
+    unless feed.instance_variable_defined?(:@last_modified)
+      puts sprintf('feed is %s (%s)', feed.class, stored_feed.feed_url)
+      return
+    end
+
     if stored_feed.last_modified == feed.last_modified
       return
     end
