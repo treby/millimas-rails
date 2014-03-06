@@ -4,8 +4,9 @@
       .alert.alert-info
         = link_to entry.title, entry.url, target: '_blank', class: 'list-group-item'
         %small
-          \-
-          %small= link_to entry.feed.title, entry.feed.url, target: '_blank'
+          %small
+            \-
+            = link_to entry.feed.title, entry.feed.url, target: '_blank'
 .row-fluid
   .span12
     = paginate @entry_list
