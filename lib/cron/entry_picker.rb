@@ -6,7 +6,6 @@ class Cron::EntryPicker
 
     feed_list.each do |feed|
       obj_feed = Feedzirra::Feed.fetch_and_parse(feed.feed_url)
-      next if /^PR:/ === obj_feed.title
 
       feed.title          = obj_feed.title
       feed.url            = obj_feed.url
@@ -33,6 +32,7 @@ class Cron::EntryPicker
   def self.save_entries(feed_id, obj_entry_list)
     obj_entry_list.reverse.each do |obj_entry|
       puts obj_entry.title
+      next if /^PR:/ === obj_entry.title
 
       entry = Entry.new
       entry.feed_id   = feed_id
