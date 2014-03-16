@@ -19,10 +19,10 @@
 
 
   %body
-    .navbar.navbar-fixed-top
+    .navbar.navbar-default.navbar-static-top
       .navbar-inner
         .container
-          %a.brand(href="/") みりますあんてな
+          %a.navbar-brand(href="/") みりますあんてな
 
     .container
 
@@ -31,5 +31,8 @@
           = bootstrap_flash
           = yield
 
-      %footer
-        %p &copy; Atelier NODOKA 2013
+      %footer.text-right
+        %p
+          &copy;
+          =link_to 'Atelier NODOKA', 'http://www.atelier-nodoka.net/'
+          2014
