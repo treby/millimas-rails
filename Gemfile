@@ -20,6 +20,9 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'haml-rails'
 gem 'feedzirra'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'settingslogic'
 
 group :development, :test do
   gem 'rspec-rails'
