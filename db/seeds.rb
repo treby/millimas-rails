@@ -4,6 +4,7 @@ Category.create(name: '個人ブログ', slug: 'matome', description: '2chまと
 Category.create(name: 'まとめサイト', slug: 'actor', description: '声優さんのブログ', sort_key: 1)
 
 Feed.create(title: 'アイマス公式', category_id: 1, feed_url: 'http://idolmaster.jp/blog/?feed=rss2')
+Feed.create(title: 'ミリオンラジオブロマガ', category_id: 1, feed_url: 'http://ch.nicovideo.jp/MillionRADIO/blomaga/nico/feed')
 
 Feed.create(title: '中村繪里子', category_id: 2, feed_url: 'http://rssblog.ameba.jp/eriko-nakamura-blog/rss20.xml')
 Feed.create(title: '今井麻美', category_id: 2, feed_url: 'http://blog.livedoor.jp/ubiquitous777/index.rdf')
