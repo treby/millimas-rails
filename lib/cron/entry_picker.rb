@@ -5,6 +5,7 @@ class Cron::EntryPicker
     feed_list = Feed.all
 
     feed_list.each do |feed|
+      next if feed.url.present?
       obj_feed = Feedzirra::Feed.fetch_and_parse(feed.feed_url)
 
       feed.title          = obj_feed.title
