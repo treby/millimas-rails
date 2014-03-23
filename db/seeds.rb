@@ -27,6 +27,7 @@ Feed.create(title: 'Nicom@s DS Style', category_id: 3, feed_url: 'http://ch.nico
 Feed.create(title: 'みります！', category_id: 4, feed_url: 'http://millimas.net/index.rdf')
 Feed.create(title: 'ミリオンライブニュース', category_id: 4, feed_url: 'http://imasmillionlive.blog.fc2.com/?xml')
 Feed.create(title: 'ヴァイ', category_id: 4, feed_url: 'http://vaimas.blog.fc2.com/?xml')
+Feed.create(title: 'グリマス日和', category_id: 4, feed_url: 'http://greemas.doorblog.jp/atom.xml')
 
 Idol.create(fullname: '天海 春香', kana: 'あまみ はるか', age: 17)
 Idol.create(fullname: '如月 千早', kana: 'きさらぎ ちはや', age: 16)
