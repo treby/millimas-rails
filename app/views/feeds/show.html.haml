@@ -1,0 +1,12 @@
+.container
+  %p.bg-info{style: 'padding: 15px'}
+    = link_to @feed.title, @feed.url, target: '_blank'
+    の記事一覧
+  .text-center
+    = paginate @entry_list
+  %ul.list-group
+    - @entry_list.each do |entry|
+      %li.list-group-item
+        = link_to entry.title, entry.url, target: '_blank'
+  .text-center
+    = paginate @entry_list

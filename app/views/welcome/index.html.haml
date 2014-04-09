@@ -7,6 +7,6 @@
         = link_to entry.title, entry.url, target: '_blank'
         %small
           \-
-          = link_to entry.feed.title, entry.feed.url, target: '_blank'
+          = link_to entry.feed.title, feed_path(entry.feed.id)
 .container.text-center
   = paginate @entry_list
