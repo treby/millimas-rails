@@ -1,12 +1,21 @@
-.container.text-center
-  = paginate @entry_list
 .container
-  %ul.list-group
-    - @entry_list.each do |entry|
-      %li.list-group-item
-        = link_to entry.title, entry.url, target: '_blank'
-        %small
-          \-
-          = link_to entry.feed.title, feed_path(entry.feed.id)
-.container.text-center
-  = paginate @entry_list
+  .row
+    .col-md-9
+      .text-center
+        = paginate @entry_list
+      %ul.list-group
+        - @entry_list.each do |entry|
+          %li.list-group-item
+            = link_to entry.title, entry.url, target: '_blank'
+            %small
+              \-
+              = link_to entry.feed.title, feed_path(entry.feed.id)
+      .text-center
+        = paginate @entry_list
+    .col-md-3
+      %ul.list-group
+        %li.list-group-item
+          登録フィード一覧
+        - @feed_list.each do |feed|
+          %li.list-group-item
+            = link_to feed.title, feed_path(feed.id)
