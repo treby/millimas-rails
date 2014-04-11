@@ -25,6 +25,7 @@ Feed.create(title: '夏川椎菜', category_id: 2, feed_url: 'http://rssblog.ame
 
 Feed.create(title: 'あいうえおPの筆不精を直すためのソレ', category_id: 3, feed_url: 'http://ch.nicovideo.jp/aiueo/blomaga/nico/feed')
 Feed.create(title: 'Nicom@s DS Style', category_id: 3, feed_url: 'http://ch.nicovideo.jp/famiellie/blomaga/nico/feed')
+Feed.create(title: 'ミツボシ パッて弾けて 流星群', category_id: 3, feed_url: 'http://ch.nicovideo.jp/swordstrike/blomaga/nico/feed')
 
 Feed.create(title: 'みります！', category_id: 4, feed_url: 'http://millimas.net/index.rdf')
 Feed.create(title: 'ミリオンライブニュース', category_id: 4, feed_url: 'http://imasmillionlive.blog.fc2.com/?xml')
