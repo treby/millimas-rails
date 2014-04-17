@@ -22,6 +22,7 @@ Feed.create(title: '田所あずさ', category_id: 2, feed_url: 'http://rssblog.
 Feed.create(title: '麻倉もも', category_id: 2, feed_url: 'http://rssblog.ameba.jp/asakuramomoblog/rss20.xml')
 Feed.create(title: '雨宮天', category_id: 2, feed_url: 'http://rssblog.ameba.jp/amamiyasorablog/rss20.xml')
 Feed.create(title: '夏川椎菜', category_id: 2, feed_url: 'http://rssblog.ameba.jp/amamiyasorablog/rss20.xml')
+Feed.create(title: '桐谷蝶々', category_id: 2, feed_url: 'http://rssblog.ameba.jp/mmmm1515/rss20.xml')
 
 Feed.create(title: 'あいうえおPの筆不精を直すためのソレ', category_id: 3, feed_url: 'http://ch.nicovideo.jp/aiueo/blomaga/nico/feed')
 Feed.create(title: 'Nicom@s DS Style', category_id: 3, feed_url: 'http://ch.nicovideo.jp/famiellie/blomaga/nico/feed')
