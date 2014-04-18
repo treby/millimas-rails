@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe FeedController do
+describe FeedsController do
 
 end
