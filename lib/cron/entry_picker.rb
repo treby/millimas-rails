@@ -42,6 +42,7 @@ class Cron::EntryPicker
   private
   def self.feed_entries(feed_id, obj_entry_list)
     entry_list = []
+    return nil if obj_entry_list.blank?
     obj_entry_list.each do |obj_entry|
       entry = Entry.new
       entry.title     = obj_entry.title
