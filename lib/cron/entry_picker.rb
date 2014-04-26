@@ -69,27 +69,26 @@ class Cron::EntryPicker
   end
 
   def self.new_entries!(stored_feed)
-    feed = Feedzirra::Feed.fetch_and_parse(stored_feed.feed_url)
-    unless feed.instance_variable_defined?(:@last_modified)
-      puts sprintf('feed is %s (%s)', feed.class, stored_feed.feed_url)
+    obj_feed = Feedzirra::Feed.fetch_and_parse(stored_feed.feed_url)
+    unless obj_feed.instance_variable_defined?(:@last_modified)
+      puts sprintf('obj_feed is %s (%s)', obj_feed.class, stored_feed.feed_url)
       return
     end
 
     return if stored_feed.last_modified.blank?
-    return if stored_feed.last_modified == feed.last_modified
+    return if stored_feed.last_modified == obj_feed.last_modified
 
     new_entries = []
     latest_entry = stored_feed.entries.last
-    feed.entries.each do |entry|
-      entry.feed_id = stored_feed.id
+    obj_feed.entries.each do |entry|
       new_entries.push(entry) if entry.published > latest_entry.published
     end
     puts sprintf('%d entries found. - %s', new_entries.count, stored_feed.title) if new_entries.present?
 
     # Feedの更新
-    stored_feed.title = feed.title
-    stored_feed.etag = feed.etag
-    stored_feed.last_modified = feed.last_modified
+    stored_feed.title = obj_feed.title
+    stored_feed.etag = obj_feed.etag
+    stored_feed.last_modified = obj_feed.last_modified
     stored_feed.save
 
     new_entries
