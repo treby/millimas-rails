@@ -61,8 +61,8 @@ class Cron::EntryPicker
   def self.save_entries(entry_list)
     entry_list.sort_by! { |entry| entry.published }
     entry_list.each do |entry|
-      puts entry.title
       next if /^PR:/ === entry.title
+      puts sprintf('Save 「%s」 of 「%s」', entry.title, entry.feed.title)
 
       entry.save
     end
@@ -71,7 +71,7 @@ class Cron::EntryPicker
   def self.new_entries!(stored_feed)
     obj_feed = Feedzirra::Feed.fetch_and_parse(stored_feed.feed_url)
     unless obj_feed.instance_variable_defined?(:@last_modified)
-      puts sprintf('obj_feed is %s (%s)', obj_feed.class, stored_feed.feed_url)
+      puts sprintf('ignored because obj_feed is %s (%s)', obj_feed.class, stored_feed.feed_url)
       return
     end
 
@@ -83,7 +83,6 @@ class Cron::EntryPicker
     obj_feed.entries.each do |entry|
       new_entries.push(entry) if entry.published > latest_entry.published
     end
-    puts sprintf('%d entries found. - %s', new_entries.count, stored_feed.title) if new_entries.present?
 
     # Feedの更新
     stored_feed.title = obj_feed.title
