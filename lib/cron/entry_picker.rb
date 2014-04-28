@@ -24,8 +24,6 @@ class Cron::EntryPicker
   end
 
   def self.update
-    puts '---'
-    puts Time.now
     feed_list = Feed.all
 
     new_entries = []
@@ -60,6 +58,10 @@ class Cron::EntryPicker
 
   def self.save_entries(entry_list)
     entry_list.sort_by! { |entry| entry.published }
+    return if entry_list.empty?
+
+    puts '---'
+    puts Time.now
     entry_list.each do |entry|
       next if /^PR:/ === entry.title
       puts sprintf('Save 「%s」 of 「%s」', entry.title, entry.feed.title)
